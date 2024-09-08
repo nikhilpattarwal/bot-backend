@@ -6,6 +6,9 @@ import typeDefs from './schema';
 import cors from 'cors'; 
 import express from 'express';
 import { YogaServer } from 'graphql-yoga';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const app = express();
 
@@ -20,12 +23,14 @@ const yoga = createYoga({
   schema,
   graphqlEndpoint: '/graphql',
 });
-
+console.log(process.env.PORT);
+console.log(process.env.SUPABASE_URL);
+console.log(process.env.SUPABASE_KEY)
 
 app.use(yoga);
 
 const server = createServer(app);
-
-server.listen(4000, () => {
-  console.log('Server is running on http://localhost:4000');
+const PORT = process.env.PORT || 4005;
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
