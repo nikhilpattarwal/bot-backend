@@ -28,6 +28,7 @@ const resolvers = {
         .eq('id', id)
         .maybeSingle();
       if (error) throw new Error(error.message);
+      console.log(data);
       return data;
     },
     getUserCoins: async (_: any, args: ArgsUser, context: Context, info: GraphQLResolveInfo) => {
