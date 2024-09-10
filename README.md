@@ -19,7 +19,7 @@ Dotenv: For managing environment variables.
 Cors: Middleware for enabling CORS.
 Installation
 Clone the repository:
-git clone (https://github.com/nikhilpattarwal/bot-backend/edit)
+git clone (https://github.com/nikhilpattarwal/bot-backend)
 cd graphql-yoga-supabase-server
 
 ## Install dependencies:
